@@ -1,0 +1,19 @@
+{
+  "name": "central-krabi-dashboard-monorepo",
+  "version": "2.9.0-c7-preview",
+  "private": true,
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "install:all": "npm ci --prefix backend && npm ci --prefix frontend",
+    "check:migrations": "node scripts/check-migrations.mjs",
+    "verify": "node scripts/verify-project.mjs && npm run check:migrations",
+    "test": "npm test --prefix backend && npm test --prefix frontend",
+    "test:e2e": "npm run test:e2e --prefix backend",
+    "test:e2e:live": "node scripts/live-e2e.mjs",
+    "build": "npm run build --prefix backend && npm run build --prefix frontend",
+    "release:check": "npm run verify && npm run test && npm run test:e2e && npm run build",
+    "dev": "node scripts/dev.mjs"
+  }
+}
