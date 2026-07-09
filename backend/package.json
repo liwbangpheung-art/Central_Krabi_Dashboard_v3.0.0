@@ -1,0 +1,30 @@
+{
+  "name": "central-krabi-api",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
+    "build": "node scripts/check-syntax.mjs",
+    "test": "vitest run",
+    "verify-env": "node scripts/verify-env.mjs",
+    "create-admin": "node scripts/create-admin.js",
+    "test:e2e": "vitest run tests/app.test.js tests/env.test.js tests/user-management.test.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.108.2",
+    "cors": "2.8.6",
+    "dotenv": "17.4.2",
+    "express": "5.2.1",
+    "helmet": "8.2.0",
+    "pptxgenjs": "^4.0.1"
+  },
+  "devDependencies": {
+    "supertest": "7.2.2",
+    "vitest": "4.1.9"
+  }
+}
