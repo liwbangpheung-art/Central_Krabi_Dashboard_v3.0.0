@@ -1,6 +1,6 @@
 {
   "name": "ckap-v3-render-supabase",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "private": true,
   "description": "Central Krabi Analytics Platform Render + Supabase package",
   "scripts": {
@@ -13,5 +13,8 @@
     "build:frontend": "npm --prefix frontend run build",
     "build:backend": "npm --prefix backend run build",
     "check": "npm --prefix backend install && npm --prefix frontend install && npm --prefix backend run build && npm --prefix frontend run build"
+  },
+  "engines": {
+    "node": ">=20.18.0 <22.0.0"
   }
 }
